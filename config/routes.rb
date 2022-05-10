@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   root 'static_pages#home'
   get 'home' => 'static_pages#home'
   get 'help' =>'static_pages#help'
@@ -8,5 +9,5 @@ Rails.application.routes.draw do
 
   # 以下のコードを追加してみましょう
   get 'hello-world' => "foo#hello"
-
+  resources :users
 end
